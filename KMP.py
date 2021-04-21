@@ -11,6 +11,7 @@ class KMP():
         self.main = m
         self.next = self._getNext()
 
+
     def _getNext(self):
         next = [-1 for i in range(len(self.pattern))]
         j = -1
@@ -25,6 +26,7 @@ class KMP():
             else:
                 j = next[j]
         return next
+
 
     def compare(self, m=""):
         if m: self.main = m
